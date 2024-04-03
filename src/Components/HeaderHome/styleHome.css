@@ -5,37 +5,16 @@
 
 .infos {
     position: absolute;
-    text-align: center;
-}
-
-.cabecalho {
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
     margin-left: 30vw;
 }
 
-.cabecalho img{
+.body img {
     width: 20vw;
     margin-top: 2vw;
     margin-bottom: 2vw;
-}
-
-.menu {
-    color: white;
-    text-decoration: none;
-    font-family: "Barlow", sans-serif;
-    font-weight: 300;
-    font-size: 1.5vw;   
-}
-
-.menu:not(:first-child) {
-    margin-left: 6vw;
-}
-
-.menu:hover {
-    color: #B48F57;
 }
 
 .title {

@@ -6,8 +6,11 @@ import { Quartos } from "../Components/QuartosHome/Quartos";
 import { Reservas } from "../Components/ReservasHome/Reservas";
 import { Restaurante } from "../Components/RestauranteHome/Restaurante";
 
+import { motion } from 'framer-motion';
+
 export function Home(){
     return ( 
+            
         <main>
             <HeaderHome />
             <Quartos />
@@ -16,7 +19,8 @@ export function Home(){
             <Espaco />
             <Restaurante />
             <Footer />
-        </main>
+
+        </main>       
       
     )
 }

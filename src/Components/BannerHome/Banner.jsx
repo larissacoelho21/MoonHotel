@@ -1,6 +1,8 @@
 import ImgBanner from "../../assets/Img/historia.svg"
 import "./banner.css"
 
+
+
 export function Banner() {
     return(
         <section>

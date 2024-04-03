@@ -1,10 +1,10 @@
-import { useState } from "react";
 import { MenuLogin } from "../MenuLogin/MenuLogin";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 
 export function FormularioCadastro() {
-//Estado inicial do formulário
+  //Estado inicial do formulário
   const initilForm = {
     nome: "",
     email: "",
@@ -27,20 +27,15 @@ export function FormularioCadastro() {
     setFormState({ ...formState, [name]: value });
   };
 
-  const exemploTarget = (event) => {
-    console.log("Elemento clicado: ", event.target);
-    console.log("Elemento atual: ", event.currentTarget);
-  };
-
   // Função para lidar com a submissão do formulário
   const handleSubmit = (event) => {
     event.preventDefault();
 
     const formGeneral = {
-      nome,
-      email,
-      telefone,
-      senha,
+      nome: formState.nome,
+      email: formState.email,
+      telefone: formState.telefone,
+      senha: formState.senha,
       createAdt: new Date(),
     };
 
@@ -52,14 +47,20 @@ export function FormularioCadastro() {
       body: JSON.stringify(formGeneral),
     };
 
-    fetch("http://localhost:5173/cadastro", requestOptions)
+    fetch("http://localhost:3001/news", requestOptions)
       .then((res) => res.json())
-      .then((data) => setFormState(data));
+      .then((data) => {
+      // Limpar os campos do formulário após o envio bem-sucedido
+      setFormState(initilForm);
+      })
+      .catch((error) => {
+        // Tratar erros, se necessário
+        console.error("Erro ao enviar o formulário:", error);
+      });
 
-    // Limpar os campos do formulário
-    setFormState({ ...initilForm });
 
-    console.log(formState);
+    
+
   };
 
   return(
@@ -76,7 +77,6 @@ export function FormularioCadastro() {
                     <p>PRIMEIRA VEZ POR AQUI? FAÇA SEU CADASTRO E RESERVE!</p>
                 </div>
                 <form onSubmit={handleSubmit}>
-
                     <div className="form-control">
                         <label htmlFor="nome">Digite seu nome</label>
                         <input

@@ -1,0 +1,55 @@
+.menu-link ul {
+    display: flex;    
+}
+
+.menu {
+    color: white;
+    text-decoration: none;
+    font-family: "Barlow", sans-serif;
+    font-weight: 300;
+    font-size: 1.5vw; 
+}
+
+
+.menu-link :not(:first-child) {
+    margin-left: 6vw;
+}
+
+.menu:hover {
+    color: #B48F57;
+}
+
+.isSelected a {
+    text-align: center;
+    background-color: rgba(180, 143, 87, 70%);
+    padding: 0.3vw 1.5vw 0.3vw 1.5vw;
+    border-radius: 1.2vw;
+    box-shadow: rgba(9, 10, 17, 0.5) 20px 30px -5px;
+    
+}
+
+.isSelected a:hover {
+    background-color: rgba(180, 143, 87, 80%);
+    color: white;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.cabecalho img{
+    width: 20vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+
+li.isSelected::marker {
+    color: transparent
+}
+
+li::marker {
+    color: transparent;
+}

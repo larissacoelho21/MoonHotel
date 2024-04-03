@@ -1,0 +1,43 @@
+{
+  "news": [
+    {
+      "id": "1",
+      "nome": "Larissa",
+      "email": "larie@gmail.com",
+      "telefone": "14367745636",
+      "senha": "21082006"
+    },
+    {
+      "id": "653b",
+      "nome": "giovann",
+      "email": "giovannasousa@gmail.com",
+      "telefone": "11975821903",
+      "senha": "gigi123",
+      "createAdt": "2024-04-03T19:17:59.644Z"
+    },
+    {
+      "id": "77b4",
+      "nome": "larissa",
+      "email": "larissa673rodrigues@gmail.com",
+      "telefone": "11968747236",
+      "senha": "210806lari",
+      "createAdt": "2024-04-03T19:21:44.051Z"
+    },
+    {
+      "id": "c90a",
+      "nome": "larissa",
+      "email": "larissa673rodrigues@gmail.com",
+      "telefone": "11968747236",
+      "senha": "210806lari",
+      "createAdt": "2024-04-03T19:30:25.759Z"
+    },
+    {
+      "id": "925c",
+      "nome": "dudao",
+      "email": "duda@gmail.com",
+      "telefone": "11940371486",
+      "senha": "1234",
+      "createAdt": "2024-04-03T19:31:38.354Z"
+    }
+  ]
+}
