@@ -1,0 +1,82 @@
+.fundo img {
+    width: 0 auto;
+    height: 50vw;
+}
+
+.infos {
+    position: absolute;
+    text-align: center;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 30vw;
+}
+
+.cabecalho img{
+    width: 20vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+
+.menu {
+    color: white;
+    text-decoration: none;
+    font-family: "Barlow", sans-serif;
+    font-weight: 300;
+    font-size: 1.5vw;   
+}
+
+.menu:not(:first-child) {
+    margin-left: 6vw;
+}
+
+.menu:hover {
+    color: #B48F57;
+}
+
+.title {
+    margin-top: 10%;
+}
+
+.title h1 {
+    font-family: "Barlow", sans-serif;
+    font-weight: 700;
+    font-size: 4vw;
+    color: white;
+    margin-bottom: 1vw;
+    margin-top: 0.5vw;
+}
+
+.title img {
+    width: 30vw;
+}
+
+.title p {
+    font-family: "Barlow", sans-serif;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    font-size: 1.50vw;
+    margin-bottom: 3vw;
+}
+
+.button {
+    background-color: #B48F57;
+    box-shadow: rgba(9, 10, 17, 0.5) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 1vw;
+    padding: 1vw 2vw 1vw 2vw;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 1.5vw;
+    text-decoration: none;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #b48f578f;
+}

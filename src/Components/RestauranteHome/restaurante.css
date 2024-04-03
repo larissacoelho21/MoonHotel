@@ -1,0 +1,35 @@
+.restaurante {
+    margin-bottom: 10%;
+}
+.texto4 {
+    position: absolute;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    margin-left: 68%;
+    margin-top: 10%;
+}
+
+.texto4 h1 {
+    font-family: "Barlow", sans-serif;
+    font-weight: 700;
+    font-size: 2vw;
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+.texto4 p {
+    font-family: "ABeeZee", sans-serif;
+    font-size: 1.5vw;
+    color: white;
+    text-align: center;
+}
+
+.imgnome {
+    position: absolute;
+    margin-top: 28%;
+    margin-left: 45%;
+}

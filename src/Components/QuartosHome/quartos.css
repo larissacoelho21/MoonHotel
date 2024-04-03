@@ -1,0 +1,55 @@
+
+.nome {
+
+    background: #58483B;
+    height: 3.5vw;
+    width: 15vw;
+    margin: 2vw 2vw 2vw ;
+}
+
+.nome h3 {
+
+    font-family: "Barlow", sans-serif;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    font-size: 2vw;
+    position: relative;
+    top: 10%;
+}
+
+.fotos {
+    display: flex;
+    justify-content: center;
+    backface-visibility: hidden;
+}
+
+.fotos img {
+    width: 30.5vw;
+}
+
+.fotos img:not(:first-child) {
+    margin-left: 1.5vw;
+}
+
+.hover {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin-left: 2.2vw; 
+    
+}
+
+.hover img {
+    width: 30.5vw;
+    transition: .8s ease;
+}
+
+.hover img:not(:first-child) {
+    margin-left: 1.5vw;
+}
+
+.hover img:hover{
+    opacity: 0;
+}
+

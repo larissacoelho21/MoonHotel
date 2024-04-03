@@ -1,0 +1,55 @@
+.container {
+    background-color: #1A1714;
+    text-align: center;
+    height: 20vw;
+}
+
+.cima img {
+    margin-top: 2vw;
+    width: 15vw;
+    margin-bottom: 2vw;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-family: "Barlow", sans-serif;
+    font-weight: 300;
+    font-size: 1.3vw;
+}
+
+.link:not(:first-child) {
+    margin-left: 6vw;
+}
+
+.cima {
+    margin-bottom: 3vw;
+}
+  
+.link:hover {
+    color: #B48F57;
+}
+
+.hr{
+   margin-bottom: 2vw;
+   opacity: 40%;
+}
+
+.direitos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.direitos p {
+    font-family: "Barlow", sans-serif;
+    font-weight: 300;
+    color: white;
+    margin-left: 1vw;
+    font-size: 1vw;
+    opacity: 80%;
+}
+
+.direitos img {
+    width: 1.7vw;
+}

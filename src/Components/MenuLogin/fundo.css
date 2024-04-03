@@ -1,0 +1,25 @@
+.imagem {
+    width: 50vw;
+    height: 70vw;
+}
+
+
+.informacoes {
+    position: absolute;
+   margin: 0 auto;
+   text-align: center;
+   transform: translate(50%, 200%);
+
+}
+
+.informacoes img {
+    width: 20vw;
+    height: auto;
+    margin-bottom: 3vw;
+}
+
+.fundologin img {
+    width: 0 auto;
+    height: 70vw;
+    margin-bottom: 0;
+}

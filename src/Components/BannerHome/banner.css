@@ -1,0 +1,23 @@
+.texto2 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-left: 7vw;
+    margin-top: 4vw;
+}
+
+.texto2 h1 {
+    font-family: "Barlow", sans-serif;
+    font-weight: 700;
+    font-size: 3.5vw;
+    color: white;
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+.texto2 p {
+    font-family: "ABeeZee", sans-serif;
+    font-size: 1.5vw;
+    color: white;
+    text-align: center;
+}

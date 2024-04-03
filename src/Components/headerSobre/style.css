@@ -1,0 +1,16 @@
+.fundo2  img{
+    height: 0 auto;
+    width: 100vw;
+}
+
+.Header2 {
+    position: absolute;
+    text-align: center;
+    margin-left: 30%;
+}
+
+.Header2 img {
+    width: 20vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}

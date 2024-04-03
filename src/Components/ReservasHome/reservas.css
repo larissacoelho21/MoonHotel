@@ -1,0 +1,51 @@
+.reservas {
+    display: flex;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.texto1 {
+    background-color: #58483B;
+    margin: 2vw 2vw 2vw;
+    width: 50vw;
+    height: 15vw;
+    text-align: center;
+    color: white;
+}
+
+.texto1 h1 {
+    font-family: "Barlow", sans-serif;
+    font-weight: bold;
+    font-size: 2vw;
+    position: relative;
+    top: 20%;
+}
+
+.texto1 p {
+    font-family: "ABeeZee", sans-serif;
+    font-size: 1.5vw;
+    position: relative;
+    top: 30%;
+}
+
+.caminho {
+    background-color: #58483B;
+    text-decoration: none;
+    color: white;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-size: 2vw;
+    padding: 1.2vw 7vw;
+    text-align: center;
+    border-radius: 1vw;
+    box-shadow: rgba(9, 10, 17, 0.5) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    
+    display: flex;
+    flex-direction: column;
+    margin: 2.5vw 4vw 4vw;
+
+}
+
+.caminho:hover {
+    background-color: #9B8977;
+}

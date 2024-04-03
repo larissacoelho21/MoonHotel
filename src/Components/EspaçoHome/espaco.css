@@ -1,0 +1,9 @@
+.coluna1, .coluna2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vw;
+}
+
+.coluna1 img:not(:first-child), .coluna2 img:not(:first-child) {   
+    margin-left: 4vw;
+}
