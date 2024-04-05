@@ -58,9 +58,6 @@ export function FormularioCadastro() {
         console.error("Erro ao enviar o formulário:", error);
       });
 
-
-    
-
   };
 
   return(

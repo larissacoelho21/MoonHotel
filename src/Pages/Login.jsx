@@ -1,12 +1,10 @@
-import { Formulario } from "../Components/FormularioLogin/Formulario";
-
-import { motion } from 'framer-motion';
+import { FormularioLogin } from "../Components/FormularioLogin/Formulario";
 
 export function Login() {
     return(
         
         <main>
-            <Formulario />
+            <FormularioLogin />
         </main>   
         
     )
