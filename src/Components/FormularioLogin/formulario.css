@@ -1,0 +1,73 @@
+.containerpai {
+    display: flex;
+}
+
+.titulo h1 {
+    font-family: "Barlow", sans-serif;
+    font-weight: bolder;
+    font-size: 3.5vw;
+    margin-top: 5vw;
+}
+
+.titulo p {
+    margin-top: 5vw;
+    font-family: "ABeeZee", sans-serif;
+    font-size: 1.5vw;
+}
+
+.input-single {
+    width: 31vw;
+    margin: 2vw 0;
+    position: relative;
+}
+
+.input-single .input {
+    margin-top: 20%;
+    width: 47vw;
+    padding: .5vw;
+    color: black;
+    border: 0;
+    border-bottom: .2vw solid #B48F57;
+    outline: 0;
+    font-size: 16px;
+    margin-bottom: 8vw;
+}
+
+
+.input-single .input:focus, .input-single .input:valid  {
+    border-bottom: .2vw solid #b48f57a3 ;
+}
+
+button {
+    background-color: #B48F57;
+    border: none;
+    padding: 1.2vw 10vw 1.2vw 10vw;
+    font-size: 2vw;
+    border-radius: 1vw;
+    box-shadow: rgba(9, 10, 17, 0.5) 0px 8px 15px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    color: white;
+    font-weight: 100;
+    margin-left: 10vw;
+    margin-bottom: 4vw;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #58483B;
+}
+
+.link-caminho p {
+    font-family: "ABeeZee", sans-serif;
+    margin-left: 13vw;
+    font-size: 1.2vw;
+}
+
+.link-caminho a {
+    color: #B48F57;
+    text-decoration: none;
+}
+
+.link-caminho a:hover {
+    color: #58483B;
+}
+

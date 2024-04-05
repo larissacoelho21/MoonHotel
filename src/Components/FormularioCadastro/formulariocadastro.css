@@ -1,0 +1,22 @@
+.form-control {
+    width: 31vw;
+    margin: 1vw 0;
+    position: relative;
+}
+
+.form-control .input {
+    margin-top: 11%;
+    width: 47vw;
+    padding: .5vw;
+    color: black;
+    border: 0;
+    border-bottom: .2vw solid #B48F57;
+    outline: 0;
+    font-size: 16px;
+    margin-bottom: 3vw;
+}
+
+.form-control .input:focus, .form-control .input:valid  {
+    border-bottom: .2vw solid #b48f57a3 ;
+}
+

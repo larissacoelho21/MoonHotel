@@ -1,10 +1,15 @@
 import { MenuLogin } from "../MenuLogin/MenuLogin";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+
+import './formulariocadastro.css'
 
 
 export function FormularioCadastro() {
   //Estado inicial do formulário
+
+  const navigate = useNavigate();
+
   const initilForm = {
     nome: "",
     email: "",
@@ -47,88 +52,106 @@ export function FormularioCadastro() {
       body: JSON.stringify(formGeneral),
     };
 
-    fetch("http://localhost:3001/news", requestOptions)
+    fetch(`http://localhost:3001/news?email=${formState.email}`)
       .then((res) => res.json())
       .then((data) => {
-      // Limpar os campos do formulário após o envio bem-sucedido
-      setFormState(initilForm);
+        
+        if (data.length > 0) {
+          alert("Este e-mail já está sendo usado. Por favor use outro email, ou faça login")
+          setFormState(initilForm);
+        } else {
+          fetch("http://localhost:3001/news", requestOptions)
+          .then((res) => res.json())
+          .then((data) => {
+              // Limpar os campos do formulário após o envio bem-sucedido
+              setFormState(initilForm);
+              navigate('/login');
+          })    
+        }
       })
       .catch((error) => {
         // Tratar erros, se necessário
         console.error("Erro ao enviar o formulário:", error);
       });
-
   };
 
   return(
-    <section>
-        <div className="Todo">
-            <div className="Direita">
-                <MenuLogin />
-            </div>
-
-            <div className="esquerda">
-
-                <div className="titulo">
+    <section className="containerpai">
+            <MenuLogin />
+            <div className="Login">
+                <div className="formulario">
+                  <div className="titulo">
                     <h1>CADASTRO</h1>
                     <p>PRIMEIRA VEZ POR AQUI? FAÇA SEU CADASTRO E RESERVE!</p>
-                </div>
-                <form onSubmit={handleSubmit}>
+                  </div>
+
+                  <form onSubmit={handleSubmit}>
                     <div className="form-control">
-                        <label htmlFor="nome">Digite seu nome</label>
+                      <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite seu nome completo"
+                        value={formState.nome}
+                        onChange={handleInput}
+                        required
+                        className="input"
+                      />
+                    </div>
+
+                    <div className="form-control">
                         <input
-                            type="text"
-                            id="nome"
-                            name="nome"
-                            value={formState.nome}
-                            onChange={handleInput}
+                          type="text"
+                          id="email"
+                          name="email"
+                          placeholder="Digite seu email"
+                          value={formState.email}
+                          onChange={handleInput}
+                          required
+                          className="input"
                         />
                     </div>
 
                     <div className="form-control">
-                        <label htmlFor="email">Digite seu email</label>
-                        <input
-                            type="text"
-                            id="email"
-                            name="email"
-                            value={formState.email}
-                            onChange={handleInput}
-                        />
+                      <input
+                        type="text"
+                        id="telefone"
+                        name="telefone"
+                        placeholder="Digite seu telefone"
+                        value={formState.telefone}
+                        onChange={handleInput}
+                        maxLength={11}
+                        required
+                        className="input"
+                      />
                     </div>
 
                     <div className="form-control">
-                        <label htmlFor="telefone">Digite seu telefone</label>
                         <input
-                            type="text"
-                            id="telefone"
-                            name="telefone"
-                            value={formState.telefone}
-                            onChange={handleInput}
-                        />
-                    </div>
-
-                    <div className="form-control">
-                        <label htmlFor="senha">Digite sua senha</label>
-                        <input
-                            type="password"
-                            id="senha"
-                            name="senha"
-                            value={formState.senha}
-                            onChange={handleInput}
+                          type="text"
+                          id="senha"
+                          name="senha"
+                          placeholder="Digite sua senha"
+                          value={formState.senha}
+                          onChange={handleInput}
+                          minLength={6}
+                          required
+                          className="input"
                         />
                     </div>
 
                     <div>
-                        <button type="submit">ENTRAR</button>
+                      <button type="submit">ENTRAR</button>
                     </div>
-                </form>
+                  </form>
 
-                <div>
-                    <p>Já possui conta? <Link to="/login" className="login">Faça o Login</Link></p>
+                  <div className="link-caminho">
+                    <p>JÁ POSSUI CONTA? <Link to="/login" className="login">FAÇA O LOGIN</Link></p>
+                  </div>
+
                 </div>
-
+              
             </div>
-        </div>
-    </section>
+        </section>
   )
 }
