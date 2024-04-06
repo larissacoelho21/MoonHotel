@@ -11,6 +11,7 @@ export function FormularioLogin() {
     // Estado para controlar os campos de entrada
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
+
     const [users, setUsers] = useState([]);
 
     // Carrega os dados dos usuários do arquivo JSON ao montar o componente
@@ -21,14 +22,14 @@ export function FormularioLogin() {
         .catch(error => console.error('Erro ao carregar dados dos usuários: ', error))
     }, [])
 
-    const handleInput = (event) => {
+/*     const handleInput = (event) => {
         const { value, name } = event.target;
         if (name === "email") {
             setEmail(value);
         } else if (name === "senha") {
             setSenha(value);
         }
-    };
+    }; */
 
     const handleLogin = (event) => {
         event.preventDefault();
@@ -36,8 +37,13 @@ export function FormularioLogin() {
         // Consulta de usuário
         const user = users.find(user => user.email === email && user.senha === senha);
         
-        const { setUsuarioLogado } = useUsuario();
-        setUsuarioLogado(user);
+        console.log(user);
+
+        sessionStorage.setItem("logado", true);
+        sessionStorage.setItem("nome", user.nome);
+
+        /* const { setUsuarioLogado } = useUsuario();
+        setUsuarioLogado(user); */
 
         if (user) {
             alert("Login efetuado com sucesso");
@@ -66,7 +72,7 @@ export function FormularioLogin() {
                                 className="input"
                                 placeholder="Digite seu email"
                                 value={email}
-                                onChange={handleInput}
+                                onChange={(e) => setEmail(e.target.value)}
                                 required
                             />
                         </div>
@@ -80,7 +86,7 @@ export function FormularioLogin() {
                                 placeholder="Digite sua senha"
                                 value={senha}
                                 minLength={6}
-                                onChange={handleInput}
+                                onChange={(e) => setSenha(e.target.value)}
                                 required
                             />
                         </div>

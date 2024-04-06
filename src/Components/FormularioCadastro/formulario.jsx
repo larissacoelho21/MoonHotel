@@ -102,7 +102,7 @@ export function FormularioCadastro() {
 
                     <div className="form-control">
                         <input
-                          type="text"
+                          type="email"
                           id="email"
                           name="email"
                           placeholder="Digite seu email"
@@ -115,13 +115,13 @@ export function FormularioCadastro() {
 
                     <div className="form-control">
                       <input
-                        type="text"
+                        type="number"
                         id="telefone"
                         name="telefone"
                         placeholder="Digite seu telefone"
                         value={formState.telefone}
                         onChange={handleInput}
-                        maxLength={11}
+                        maxLength={14}
                         required
                         className="input"
                       />
@@ -129,7 +129,7 @@ export function FormularioCadastro() {
 
                     <div className="form-control">
                         <input
-                          type="text"
+                          type="password"
                           id="senha"
                           name="senha"
                           placeholder="Digite sua senha"

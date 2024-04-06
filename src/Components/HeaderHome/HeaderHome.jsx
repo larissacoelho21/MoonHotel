@@ -7,7 +7,7 @@ import { MenuHeader } from "../MenuHeader/Menu";
 
 function scroollReserva() {
     window.scrollTo({
-        top: 1200,
+        top: 1500,
         behavior: 'smooth'
     })
 }

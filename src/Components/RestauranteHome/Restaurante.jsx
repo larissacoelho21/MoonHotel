@@ -16,13 +16,12 @@ export function Restaurante() {
             <div className="imgnome">
                 <img src={BannerRestaurante} alt="" />
             </div>
-
-            <div className="imgfundo">
-                <img src={ImgRestaurante} alt="" />
-            </div>
-
             
         </div>
+
+        <div className="imgfundo">
+                <img src={ImgRestaurante} alt="" />
+            </div>
      </section>   
     )
 }

@@ -23,6 +23,22 @@
       "telefone": "11849573058",
       "senha": "Sarinha123",
       "createAdt": "2024-04-06T12:22:48.014Z"
+    },
+    {
+      "id": "1abe",
+      "nome": "arthur motel",
+      "email": "motel@motel.com.br",
+      "telefone": "11956581212",
+      "senha": "123456",
+      "createAdt": "2024-04-06T15:43:42.520Z"
+    },
+    {
+      "id": "30d9",
+      "nome": "Renata Rodrigues da Silva",
+      "email": "renatarodrigues@gmail.com",
+      "telefone": "11874657593",
+      "senha": "210806",
+      "createAdt": "2024-04-06T17:41:48.794Z"
     }
   ]
 }
