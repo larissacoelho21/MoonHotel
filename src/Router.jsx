@@ -3,7 +3,6 @@ import { Home } from './Pages/Home';
 import { Sobre } from './Pages/Sobre';
 import { Login } from './Pages/Login';
 import { Cadastro } from './Pages/Cadastro';
-import { UsuarioProvider } from './Components/UsuarioLogado/usuario';
 import { Dashboard } from './Pages/Dashboard';
 
 
@@ -11,7 +10,6 @@ const Router = () => {
     return (
 
        <BrowserRouter>
-            <UsuarioProvider>
                 <Routes>
                     <Route path='/' element={<Home/>}></Route>
                     <Route path='/sobre' element={<Sobre />}></Route>
@@ -19,7 +17,6 @@ const Router = () => {
                     <Route path='/cadastro' element={<Cadastro />}></Route>
                     <Route path='/dashboard' element={<Dashboard />}></Route>
                 </Routes>
-           </UsuarioProvider>
         </BrowserRouter>
 
     )

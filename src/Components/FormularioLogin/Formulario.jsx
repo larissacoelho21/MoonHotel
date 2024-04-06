@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import "./formulario.css";
-import { useUsuario } from "../UsuarioLogado/usuario";
  
 export function FormularioLogin() {
 
