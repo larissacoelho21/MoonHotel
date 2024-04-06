@@ -3,57 +3,50 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import "./formulario.css";
+import { useUsuario } from "../UsuarioLogado/usuario";
  
 export function FormularioLogin() {
 
     const navigate = useNavigate();
 
-    const [email] = useState();
-    const [senha] = useState();
-    const [news, setUsers] = useState([]);
-    const [formState, setFormState] = useState({});
+    // Estado para controlar os campos de entrada
+    const [email, setEmail] = useState("");
+    const [senha, setSenha] = useState("");
+    const [users, setUsers] = useState([]);
 
+    // Carrega os dados dos usuários do arquivo JSON ao montar o componente
     useEffect(() => {
-        fetch('http://localhost:3001/news')
+        fetch('http://localhost:3001/users')
         .then(response => response.json())
         .then(data => setUsers(data))
         .catch(error => console.error('Erro ao carregar dados dos usuários: ', error))
     }, [])
 
-
-    //Função para lidar com a alteração de campos de entrada
     const handleInput = (event) => {
-    //Obtendo o elemento da entrada atual
-    const target = event.target; //currentTarget navega entre os eventos do js
-
-    //Extraindo o valor e o nome do campo de entrada
-    const { value, name } = target;
-
-    //Atualizando o estado do formulário com os novos valores
-    setFormState({ ...formState, [name]: value });
+        const { value, name } = event.target;
+        if (name === "email") {
+            setEmail(value);
+        } else if (name === "senha") {
+            setSenha(value);
+        }
     };
-
 
     const handleLogin = (event) => {
         event.preventDefault();
 
-        //Verificar useState
-        //Os valores n'Ao estao sendo atualizados!!
-        console.log("===>")
-        console.log(email)
-        console.log(senha)
+        // Consulta de usuário
+        const user = users.find(user => user.email === email && user.senha === senha);
+        
+        const { setUsuarioLogado } = useUsuario();
+        setUsuarioLogado(user);
 
-
-        const userExist = news.find(user => user.email === email && user.senha === senha)
-
-        if (userExist) {
-           
-            navigate('/dashboard')  
-            
-        }else {
-            alert("Algo está errado!! Usuário não encontrado")
-        }
-    }
+        if (user) {
+            alert("Login efetuado com sucesso");
+            navigate('/dashboard');
+        } else {
+            alert("Não foi possível encontrar seu usuário, tente novamente ou cadastre-se!");
+        }
+    };
     
     return (
         <section className="containerpai">
@@ -105,6 +98,7 @@ export function FormularioLogin() {
                     
                 </div>
             </div>
+
         </section>
     )
 }

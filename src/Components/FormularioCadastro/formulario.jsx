@@ -52,7 +52,7 @@ export function FormularioCadastro() {
       body: JSON.stringify(formGeneral),
     };
 
-    fetch(`http://localhost:3001/news?email=${formState.email}`)
+    fetch(`http://localhost:3001/users?email=${formState.email}`)
       .then((res) => res.json())
       .then((data) => {
         
@@ -60,9 +60,10 @@ export function FormularioCadastro() {
           alert("Este e-mail já está sendo usado. Por favor use outro email, ou faça login")
           setFormState(initilForm);
         } else {
-          fetch("http://localhost:3001/news", requestOptions)
+          fetch("http://localhost:3001/users", requestOptions)
           .then((res) => res.json())
           .then((data) => {
+              alert("Parabéns! Cadastro concluido com sucesso!")
               // Limpar os campos do formulário após o envio bem-sucedido
               setFormState(initilForm);
               navigate('/login');

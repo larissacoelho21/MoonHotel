@@ -1,67 +1,20 @@
 {
-  "news": [
+  "users": [
     {
-      "id": "1",
-      "nome": "Larissa",
-      "email": "larie@gmail.com",
-      "telefone": "14367745636",
-      "senha": "21082006"
-    },
-    {
-      "id": "653b",
-      "nome": "giovann",
-      "email": "giovannasousa@gmail.com",
-      "telefone": "11975821903",
-      "senha": "gigi123",
-      "createAdt": "2024-04-03T19:17:59.644Z"
-    },
-    {
-      "id": "77b4",
-      "nome": "larissa",
+      "id": "05c6",
+      "nome": "Larissa Rodrigues Coelho",
       "email": "larissa673rodrigues@gmail.com",
       "telefone": "11968747236",
-      "senha": "210806lari",
-      "createAdt": "2024-04-03T19:21:44.051Z"
+      "senha": "larie210806",
+      "createAdt": "2024-04-06T00:23:44.918Z"
     },
     {
-      "id": "77bb",
-      "nome": "Larissa Rodrigues Coelho",
-      "email": "673laricelrodrigues@gmail.com",
-      "telefone": "11989823741",
-      "senha": "Lari@2108",
-      "createAdt": "2024-04-05T19:10:09.859Z"
-    },
-    {
-      "id": "fcc8",
-      "nome": "Gustavo Campos da Paixao",
-      "email": "gp67009@gmail.com",
-      "telefone": "11987643456",
-      "senha": "C@mpos27",
-      "createAdt": "2024-04-05T19:10:56.514Z"
-    },
-    {
-      "id": "49af",
-      "nome": "Duda",
-      "email": "gp67009@gmail.com",
-      "telefone": "23456790523",
-      "senha": "Lari@2108",
-      "createAdt": "2024-04-05T19:11:26.290Z"
-    },
-    {
-      "id": "8c7a",
-      "nome": "RENATA RODRIGUES DA SILVA",
-      "email": "renatarodrigues673@gmail.com",
-      "telefone": "11968747236",
-      "senha": "C@mpos27",
-      "createAdt": "2024-04-05T19:26:37.173Z"
-    },
-    {
-      "id": "8b0a",
-      "nome": "arthur",
-      "email": "aba256@gmail.com",
-      "telefone": "29727475930",
-      "senha": "Lari@2108",
-      "createAdt": "2024-04-05T19:27:06.517Z"
+      "id": "e242",
+      "nome": "Jade Rodrigues Coelho",
+      "email": "jadinha@gmail.com",
+      "telefone": "11886735837",
+      "senha": "Jade@0512",
+      "createAdt": "2024-04-06T00:36:50.364Z"
     }
   ]
 }

@@ -1,3 +1,8 @@
+.fundoimg img {
+    width: 0 auto;
+    height: 24vw;
+}
+
 .texto2 {
     position: absolute;
     display: flex;
