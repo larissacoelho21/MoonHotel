@@ -29,6 +29,7 @@ export function HeaderHome() {
                              confortável no coração da cidade. Quartos elegantes, instalações <br />
                              modernas e serviço de qualidade, garantem uma experiência <br />
                              memorável. Seu refúgio de excelência aguarda por você.</p>
+                            
                             <Link onClick={scroollReserva} className="button">Reserve!</Link>
 
                         </div>

@@ -42,6 +42,7 @@ export function FormularioLogin() {
         sessionStorage.setItem("logado", true);
         sessionStorage.setItem("nome", user.nome);
 
+
         /* const { setUsuarioLogado } = useUsuario();
         setUsuarioLogado(user); */
 

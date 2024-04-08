@@ -52,6 +52,7 @@ export function FormularioCadastro() {
       body: JSON.stringify(formGeneral),
     };
 
+
     fetch(`http://localhost:3001/users?email=${formState.email}`)
       .then((res) => res.json())
       .then((data) => {

@@ -1,0 +1,35 @@
+.img-dashboard img {
+    width: 0 auto;
+    height: 30.80vw;
+    margin-bottom: 5vw;
+    margin-top: 5vw;
+}
+
+.texto-dashboard {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+
+    margin-top: 13%;
+    margin-right: 50vw;
+}
+
+.texto-dashboard h1 {
+    font-family: "Barlow", sans-serif;
+    font-weight: bold;
+    font-size: 2.3vw;
+
+    margin-right: 11vw;
+    margin-bottom: 2vw;
+}
+
+.texto-dashboard p{
+    font-family: "ABeeZee", sans-serif;
+    font-size: 1.4vw;
+
+    margin-right: 13vw;
+
+}
