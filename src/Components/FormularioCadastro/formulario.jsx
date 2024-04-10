@@ -10,6 +10,7 @@ export function FormularioCadastro() {
 
   const navigate = useNavigate();
 
+  //definindo parametros vazios
   const initilForm = {
     nome: "",
     email: "",
@@ -44,6 +45,7 @@ export function FormularioCadastro() {
       createAdt: new Date(),
     };
 
+    //criando usuario e jogando para o banco de dados
     const requestOptions = {
       method: "POST",
       headers: {
@@ -53,13 +55,14 @@ export function FormularioCadastro() {
     };
 
 
+    //fetch com verificação de email existente
     fetch(`http://localhost:3001/users?email=${formState.email}`)
       .then((res) => res.json())
       .then((data) => {
         
         if (data.length > 0) {
           alert("Este e-mail já está sendo usado. Por favor use outro email, ou faça login")
-          setFormState(initilForm);
+          setFormState(initilForm); //limpar formulario
         } else {
           fetch("http://localhost:3001/users", requestOptions)
           .then((res) => res.json())
@@ -96,7 +99,7 @@ export function FormularioCadastro() {
                         placeholder="Digite seu nome completo"
                         value={formState.nome}
                         onChange={handleInput}
-                        required
+                        required // que o input seja obrigatorio conter um valor
                         className="input"
                       />
                     </div>
@@ -122,7 +125,7 @@ export function FormularioCadastro() {
                         placeholder="Digite seu telefone"
                         value={formState.telefone}
                         onChange={handleInput}
-                        maxLength={14}
+                        maxLength={14} // maximo de numeros permitido
                         required
                         className="input"
                       />
@@ -136,7 +139,8 @@ export function FormularioCadastro() {
                           placeholder="Digite sua senha"
                           value={formState.senha}
                           onChange={handleInput}
-                          minLength={6}
+                          minLength={6} //min de caracteres 
+                          //caso for menor que 6 aparece uma mensagem solicitando mais
                           required
                           className="input"
                         />

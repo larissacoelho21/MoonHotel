@@ -6,6 +6,7 @@ import cincoEstrelas from "../../assets/Img/stars.svg"
 import { MenuHeader } from "../MenuHeader/Menu";
 
 function scroollReserva() {
+    //funcionalidade borao reserve rolagem ate o meio da pagina
     window.scrollTo({
         top: 1500,
         behavior: 'smooth'

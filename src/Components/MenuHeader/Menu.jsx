@@ -3,7 +3,7 @@ import Logo from "../../assets/Img/Logo.svg"
 
 import "./Menu.css"
 
-
+//function dedicada apenas para o menu
 export function MenuHeader(props) {
   
     const routes = [
@@ -18,7 +18,7 @@ export function MenuHeader(props) {
                 <img src={Logo} alt="" />
 
                 <div className="menu-link">
-                    <ul>
+                    <ul> {/* construindo um path que leia qual pagina esta selecionada e deixe com o fundo diferente */}
                         {routes.map((route) => (
                             <li key={route.path} className={props.path === route.path ? 'isSelected' : undefined}>
                             <Link className="menu" to={route.path}>{route.name}</Link>

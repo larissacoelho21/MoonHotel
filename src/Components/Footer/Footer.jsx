@@ -5,6 +5,8 @@ import LogoImg from "../../assets/Img/Logo.svg"
 import Copyright from "../../assets/Img/Copyright.svg"
 
 function scrrolInicio() {
+    //rolagem para o topo da página login
+    //caso esteja em outra pagina clicando no link "inicio" ele direciona ao topo da pagina inicio 
     window.scrollTo({
         top: 0,
         behavior: 'smooth'

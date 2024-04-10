@@ -5,7 +5,7 @@ import { Login } from './Pages/Login';
 import { Cadastro } from './Pages/Cadastro';
 import { Dashboard } from './Pages/Dashboard';
 
-
+//criando rotas e caminhos
 const Router = () => {
     return (
 

@@ -17,7 +17,6 @@ export function Home(){
             <Espaco />
             <Restaurante />
             <Footer />
-
         </main>       
       
     )

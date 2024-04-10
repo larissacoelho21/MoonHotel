@@ -5,6 +5,7 @@ import "./fundo.css"
 
 export function MenuLogin() {
     return(
+        //imagem da esquerda das paginas login e cadastro junto com o menu
         <section className="imagem">
             <div className="imagem">
                 <div className="informacoes">

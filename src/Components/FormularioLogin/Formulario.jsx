@@ -36,17 +36,19 @@ export function FormularioLogin() {
 
         // Consulta de usuário
         const user = users.find(user => user.email === email && user.senha === senha);
-        
+
         console.log(user);
 
-        sessionStorage.setItem("logado", true);
-        sessionStorage.setItem("nome", user.nome);
-
+       
 
         /* const { setUsuarioLogado } = useUsuario();
         setUsuarioLogado(user); */
 
         if (user) {
+
+            sessionStorage.setItem("logado", true);
+            sessionStorage.setItem("nome", user.nome);
+            
             alert("Login efetuado com sucesso");
             navigate('/dashboard');
         } else {

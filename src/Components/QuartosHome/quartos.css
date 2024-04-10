@@ -25,7 +25,8 @@
 }
 
 .fotos img {
-    width: 30.5vw;
+    width: 0 auto;
+    height: 37vw;
 }
 
 .fotos img:not(:first-child) {
@@ -36,13 +37,14 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    margin-left: 2.2vw; 
     
 }
 
 .hover img {
-    width: 30.5vw;
+    width: 0 auto;
+    height: 37vw;
     transition: .8s ease;
+    margin-left: 4%;
 }
 
 .hover img:not(:first-child) {
